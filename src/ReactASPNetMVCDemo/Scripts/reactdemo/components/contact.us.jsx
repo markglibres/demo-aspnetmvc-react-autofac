@@ -22,20 +22,6 @@
     handleSubmit: function (e) {
         e.preventDefault();
 
-        //var data = new FormData();
-        //data.append('Name', this.state.name.trim());
-        //data.append('Email', this.state.email.trim());
-        //data.append('Message', this.state.message.trim());
-
-        //submit data to server
-        //JQuery ajax can also be used here
-        //var xhr = new XMLHttpRequest();
-        //xhr.open('post', this.props.submitUrl, true);
-        //xhr.onload = function () {
-        //    this.setState({ name: '', email: '', message: '' });
-        //}.bind(this);
-        //xhr.send(data);
-
         var data = {
             Name: this.state.name.trim(),
             Email: this.state.email.trim(),
@@ -86,7 +72,3 @@
     }
 });
 
-ReactDOM.render(
-    <ContactUs submitUrl='/contact-us/post'/>,
-    document.getElementById('contact-us')
-);

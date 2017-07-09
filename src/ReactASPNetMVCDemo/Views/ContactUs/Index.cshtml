@@ -1,8 +1,12 @@
 ﻿@{
     ViewBag.Title = "Contact Us";
 }
-
+<div id="weather" class="col-centered"></div>
+<hr />
 <div id="contact-us" class="col-centered"></div>
 
-<script src='@Url.Content("~/Scripts/reactdemo/status.bar.jsx")'></script>
-<script src='@Url.Content("~/Scripts/reactdemo/contact.us.jsx")'></script>
+<script src='@Url.Content("~/Scripts/reactdemo/components/clock.jsx")'></script>
+<script src='@Url.Content("~/Scripts/reactdemo/components/weather.jsx")'></script>
+<script src='@Url.Content("~/Scripts/reactdemo/components/status.bar.jsx")'></script>
+<script src='@Url.Content("~/Scripts/reactdemo/components/contact.us.jsx")'></script>
+<script src='@Url.Content("~/Scripts/reactdemo/pages/render.contact.form.jsx")'></script>

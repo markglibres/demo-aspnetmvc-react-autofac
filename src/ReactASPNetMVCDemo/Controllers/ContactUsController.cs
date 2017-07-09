@@ -17,7 +17,7 @@ namespace ReactASPNetMVCDemo.Controllers
         {
             _contactService = contactService;
         }
-        [Route]
+        
         public ActionResult Index()
         {
             return View();
