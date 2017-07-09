@@ -9,6 +9,7 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using System.Data.Entity;
 
+
 namespace ReactASPNetMVCDemo
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -24,7 +25,8 @@ namespace ReactASPNetMVCDemo
             builder.RegisterType<ContactRepository>().As<IRepository<ContactUs>>();
             builder.RegisterType<ContactService>().As<IContactService<ContactUs>>();
 
-            
+           
+
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 

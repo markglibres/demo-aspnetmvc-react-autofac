@@ -12,10 +12,11 @@ namespace ReactASPNetMVCDemo.Controllers
     public class ContactUsController : Controller
     {
         private readonly IContactService<ContactUs> _contactService;
-
+     
         public ContactUsController(IContactService<ContactUs> contactService)
         {
             _contactService = contactService;
+           
         }
         
         public ActionResult Index()
@@ -38,6 +39,27 @@ namespace ReactASPNetMVCDemo.Controllers
                 Message = "Success! Your message has beent sent."
             };
             return Json(result);
+        }
+
+        [Route("listing")]
+        public async Task<ActionResult> Listing()
+        {
+            var list = await _contactService.GetAllAsync();
+            //should map domain model - view model outside controller
+            //using AutoMapper or other mapping libraries
+            //but for demo purposes, let's map models manually 
+            var model = new List<ContactFormViewModel>();
+            foreach(var contact in list)
+            {
+                var item = new ContactFormViewModel() {
+                    Name = contact.Name,
+                    Email = contact.Email,
+                    Message = contact.Message
+                };
+                model.Add(item);
+            }
+
+            return View(model);
         }
     }
 }   
