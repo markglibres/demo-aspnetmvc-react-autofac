@@ -79,22 +79,10 @@
                 <div className="row form-group">
                     <input type="submit" value="Submit" className="pull-right" />
                 </div>
-                {this.state.status != '' ? <StatusBar message={this.state.status} className="alert alert-success fade in" /> : null}
+                <StatusBar show={this.state.status != ''} message={this.state.status} className="alert alert-success fade in" /> 
             </form>
         )
         
-    }
-});
-
-var StatusBar = React.createClass({
-    render: function () {
-        return (
-            <div className="row">
-                <div className={this.props.className}>
-                    <strong>{this.props.message}</strong>
-                </div>
-            </div>
-        )
     }
 });
 
