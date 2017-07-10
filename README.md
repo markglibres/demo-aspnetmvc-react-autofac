@@ -14,6 +14,8 @@ How to run project locally:
 
 A link to view the submitted forms can be found on "/contact-us/listing"
 
-Warning: demo website might take some time to load initially because it's a free account on azure and without the option to enable "always on".
+
 Demo url: http://markg-aspnetmvcreact.azurewebsites.net
+
+Warning: demo website might take some time to load initially because it's a free account on azure and without the option to enable "always on".
 
